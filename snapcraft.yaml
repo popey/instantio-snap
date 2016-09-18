@@ -1,0 +1,24 @@
+name: instantio
+version: '0'
+summary: Instant.io
+description: |
+  Download/upload files using the WebTorrent protocol (BitTorrent over WebRTC).
+  This is a beta.
+
+grade: stable
+confinement: strict
+
+apps:
+  instantio:
+    command: bin/instantio
+    plugs: [network, network-bind]
+
+parts:
+  instantio:
+    plugin: instantio
+    source: https://github.com/feross/instant.io.git
+  launcher:
+    plugin: copy
+    source: ./
+    files:
+      'instantio': bin/instantio

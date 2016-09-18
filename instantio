@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+## Launch from installed dir
+cd $SNAP/lib/node_modules/instant.io
+node server

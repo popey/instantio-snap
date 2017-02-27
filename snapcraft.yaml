@@ -17,6 +17,8 @@ parts:
   instantio:
     plugin: instantio
     source: https://github.com/feross/instant.io.git
+    stage-packages:
+      - python3
   launcher:
     plugin: copy
     source: ./
